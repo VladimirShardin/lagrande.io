@@ -1,0 +1,321 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+html {
+  background-image: url("../img/XXXL.jpeg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+body {
+  position: relative; /* делаем body родителем для абсолютного позиционирования элементов */
+  max-width: 100%;
+    margin: 0;
+    text-align: center; /* Убираем отступы */
+  font-family: "Montserrat", sans-serif; /* Предпочитаемый шрифт на странице */
+  
+  /*background-image: url("../img/XXXL.jpeg");
+  background-size: cover;*/
+}
+
+.header {
+  box-sizing: initial;
+  text-align: center;
+  max-width: 80%;
+  max-height: 100%;
+  position: relative;
+  left: 10%;
+  height: 100vh;
+  /*background: radial-gradient(100% 100%, #036814, rgb(220, 236, 219));*/
+}
+.topmenu {
+  text-align: center;
+  backface-visibility: hidden;
+  /*background: radial-gradient(100% 100%, #036b15, white);*/
+}
+.topmenu > li {
+  display: inline-block;
+  position: relative;
+}
+.topmenu > li > a {
+  font-family: "Exo 2", sans-serif;
+  height: 70px;
+  line-height: 70px;
+  padding: 0 30px 0 30px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #003559;
+  text-transform: uppercase;
+}
+.down:after {
+  margin-left: 2px;
+  font-family: FontAwesome;
+}
+.topmenu li a:hover {
+  margin-top: 0px;
+  color: #e6855f;
+}
+.submenu {
+  background: none;
+  border: 0;
+  position: absolute;
+  left: 0;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 5;
+  width: 300px;
+  transform: perspective(1000px) rotateX(-300deg);
+  transform-origin: 0% 0%;
+  transition: 0.6s ease-in-out;
+}
+.topmenu > li:hover .submenu {
+  visibility: visible;
+  opacity: 1;
+  transform: perspective(400px) rotateX(0deg);
+}
+.submenu li a {
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  line-height: 50px;
+  padding: 0 0px;
+  font-family: "Kurale", serif;
+}
+.pfone {
+  float: right;
+  margin: 0;
+}
+.pfone-text {
+  margin: 2px 10px 0 0;
+}
+.txt-h2 {
+  display: inline-block;
+  text-align: center;
+  max-width: 100%;
+  margin-left: 10px;
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+
+h2 {
+  display: inline-block;
+  text-align: center;
+  margin-left: 30px;
+}
+/*img-logo*/
+img {
+  max-width: 80%;
+  margin: 0;
+  text-align: right;
+  
+}
+.img-logo {
+  max-width: 60%;
+  max-height: 60%;
+  position: relative;
+  margin-top: 30px;
+  text-align: left;
+  background-size: cover;
+}
+/*.eiffel-tower-blok{
+  position: relative;
+    text-align: left;
+    margin-top: 10px;
+}*/
+/*.eiffel-tower{
+  position: relative;
+  text-align: left;
+  margin-top: 30px;
+  width: 120px;
+  height: 120%;
+}*/
+/*Анимированные кнопки*/
+
+.bottom {
+  max-width: 100%;
+  margin-top: 20%;
+  text-align: right;
+}
+
+.bottom-li {
+  list-style: none;
+  position: relative;
+  display: inline-block;
+  margin-left: 5%;
+  width: 120px;
+  height: 120px;
+  background-size: cover;
+}
+
+@-moz-keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+@-webkit-keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+@-o-keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+.round {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding-top: 35px;
+  text-decoration: none;
+  text-align: center;
+  font-size: 30px;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.7);
+  letter-spacing: -0.065em;
+  font-family: "Hammersmith One", sans-serif;
+  -webkit-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+  box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.6);
+  border-radius: 300px;
+  z-index: 1;
+  border-width: 1px;
+  border-style: solid;
+}
+
+.round:hover {
+  width: 130%;
+  height: 130%;
+  left: -15%;
+  top: -15%;
+  font-size: 50px;
+  padding-top: 55px;
+  -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  -o-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  z-index: 2;
+  border-size: 10px;
+  -webkit-transform: rotate(-360deg);
+  -moz-transform: rotate(-360deg);
+  -o-transform: rotate(-360deg);
+  transform: rotate(-360deg);
+}
+
+a.red {
+  background-color: #b88f83;
+  color: rgb(64, 62, 62);
+  border-color: #000000;
+}
+
+a.red:hover {
+  color:#b88f83;
+}
+
+a.green {
+  background-color: rgb(148, 174, 101);
+  color: rgb(64, 62, 62);
+  border-color: rgb(0, 0, 0);
+  
+}
+
+a.green:hover {
+  color: rgb(148, 174, 101);
+}
+
+/*a.yellow {
+  background-color: rgba(252, 227, 1, 1);
+  color: rgba(153, 38, 0, 1);
+  border-color: rgba(153, 38, 0, 0.2);
+}
+
+a.yellow:hover {
+  color: rgba(252, 227, 1, 1);
+}
+a.blue {
+  background-color: rgb(5, 1, 252);
+  color: rgba(153, 38, 0, 1);
+  border-color: rgba(153, 38, 0, 0.2);
+}
+
+a.blue:hover {
+  color: rgb(5, 1, 252);
+}
+a.orange {
+  background-color: rgb(252, 152, 1);
+  color: rgba(153, 38, 0, 1);
+  border-color: rgba(153, 38, 0, 0.2);
+}
+
+a.orange:hover {
+  color: rgb(252, 152, 1);
+}*/
+
+.round span.round {
+  display: block;
+  opacity: 0;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  font-size: 1px;
+  border: none;
+  padding: 40% 20% 0 20%;
+  color: black;
+}
+
+.round span:hover {
+  opacity: 0.85;
+  font-size: 24px;
+  -webkit-text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+  -moz-text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+  -o-text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.green span {
+  background: rgb(111, 131, 74);
+}
+
+.red span {
+  background: #967469;
+}
+
+/*.yellow span {
+  background: rgba(161, 145, 0, 0.7);
+}
+.blue span {
+  background: rgba(0, 24, 161, 0.7);
+}
+.orange span {
+  background: rgba(161, 38, 0, 0.7);
+}
